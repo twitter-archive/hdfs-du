@@ -14,7 +14,7 @@
 
 -- pig -param INPUT=fsimage-delimited.tsv -param OUTPUT=hdfsdu.out /path/to/hdfsdu.pig
 
--- register pig/target/hdfsdu-pig-1.0.0.jar;
+-- register pig/target/hdfsdu-pig-*.jar;
 
 DEFINE extractsizes com.twitter.hdfsdu.pig.piggybank.ExtractSizes();
 
