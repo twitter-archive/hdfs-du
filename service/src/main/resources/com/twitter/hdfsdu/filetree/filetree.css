@@ -1,0 +1,101 @@
+/* 
+ * Copyright 2012 Twitter, Inc.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#filetree
+{
+/* 	width: 600px;
+ 	*/height: 830px;
+}
+
+.open_branch
+{
+  cursor: pointer;
+  fill: #e3e3e3;
+}
+
+.closed_branch
+{
+  cursor: pointer;
+  fill: #222;
+}
+
+.node_hover
+{
+  fill: #f44;
+}
+
+.node_text
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  border-collapse:collapse;
+  cursor: pointer;
+  font: 14px sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+.size_text
+{
+  padding-top: 5px;
+  font: 11px sans-serif;
+}
+
+.arrow_text
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  border-collapse:collapse;
+  cursor: pointer;
+  font: 40px sans-serif;
+  font-weight: bold;
+}
+
+
+.leaf_text
+{
+  /* background: lightgreen; */
+  color: #888;
+}
+
+.branch_text
+{
+  /* background: lightblue; */
+  color: #555;
+}
+
+.leaf_text:hover
+{
+  /* background: red; */
+  color: #444;
+}
+
+.branch_text:hover
+{
+  /* background: green; */
+  color: #111;
+}
+
+
+
+path.link 
+{
+  fill: none;
+  stroke: #e3e3e3;
+  stroke-width: 3px;
+}

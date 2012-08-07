@@ -1,0 +1,7 @@
+*.iml
+*.ipr
+*.iws
+target
+sample-data*
+hdfsdu_test:hdfsdu_test.*
+.DS*

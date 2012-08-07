@@ -1,0 +1,7 @@
+/	19000	6	0
+/tmp	5000	1	1
+/user	6000	3	0
+/user/travis	3000	2	0
+/user/travis/foo	1000	1	1
+/user/travis/bar	2000	1	1
+/var	8000	1	1

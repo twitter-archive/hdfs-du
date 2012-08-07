@@ -1,0 +1,69 @@
+<!-- 
+  -- Copyright 2012 Twitter, Inc.
+  -- Licensed under the Apache License, Version 2.0 (the "License");
+  -- you may not use this file except in compliance with the License.
+  -- You may obtain a copy of the License at
+  -- 
+  --     http://www.apache.org/licenses/LICENSE-2.0
+  -- 
+  -- Unless required by applicable law or agreed to in writing, software
+  -- distributed under the License is distributed on an "AS IS" BASIS,
+  -- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  -- See the License for the specific language governing permissions and
+  -- limitations under the License.
+  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>HDFS DU</title>
+    <link rel="stylesheet" href="index.css" media="all"/>
+    <link rel="stylesheet" href="filetree/filetree.css" media="all"/>
+    <link rel="stylesheet" href="treemap/treemap.css" media="all"/>
+
+    <script src="index.js"></script>
+    <script src="chroma/chroma.js"></script>
+    <script src="d3/d3.js"></script>
+    <script src="jquery/jquery.js"></script>
+    <script src="filetree/htmltools.js"></script>
+    <script src="jit/jit.treemap.js"></script>
+    <script src="treemap/treemap.js"></script>
+    <script src="filetree/filetree.js"></script>
+    
+  </head>
+  <body>
+    <div class="widget left">
+	    <div id="breadcrumb">/</div>
+		<div class="description">
+			Color encodes average file size in folders. Numerous small files are
+			not desirable in HDFS.
+	
+			<div class="range">
+				<div class="from">contains efficient files</div>
+				<div class="to">contains inefficient files</div>
+			</div>
+	
+		</div>
+	    <div id="treemap"></div>
+	    <div id="controls">
+	        <ul>
+	            <li>
+	                <button id="back">Up one level</button>
+	            </li>
+	            <li>
+	                <button id="size" class='selected'>File size as area</button>
+	            </li>
+	            <li>
+	                <button id="count">File count as area</button>
+	            </li>
+	        </ul>
+	    </div>
+    </div>    
+    
+    <div class="widget right">
+        <div id="filetree"></div>
+    </div>
+    
+  </body>
+</html>

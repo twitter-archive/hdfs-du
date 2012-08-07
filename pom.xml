@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>com.twitter.hdfsdu</groupId>
+  <artifactId>hdfsdu</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+
+  <name>hdfsdu</name>
+  <url>https://github.com/twitter/hdfs-du</url>
+  <description>Visualize your HDFS cluster.</description>
+
+  <licenses>
+    <license>
+      <name>Apache License</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>@tc</id>
+      <name>Travis Crawford</name>
+      <email>travis@twitter.com</email>
+      <organization>Twitter, Inc.</organization>
+      <organizationUrl>http://www.twitter.com</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>@philogb</id>
+      <name>Nicolas Belmonte</name>
+      <email>nbelmonte@twitter.com</email>
+      <organization>Twitter, Inc.</organization>
+      <organizationUrl>http://www.twitter.com</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>@trebor</id>
+      <name>Robert Harris</name>
+      <email>trebor@twitter.com</email>
+      <organization>Twitter, Inc.</organization>
+      <organizationUrl>http://www.twitter.com</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <repositories>
+    <repository>
+      <id>twitter</id>
+      <url>http://maven.twttr.com</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>twitter</id>
+      <url>http://maven.twttr.com</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <modules>
+    <module>pig</module>
+    <module>service</module>
+  </modules>
+
+</project>
