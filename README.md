@@ -86,16 +86,7 @@ python src/main/python/leaf.py hdfsdu.out/hdfsdu.out > hdfsdu.data
 Now we're ready to start HDFS-DU!
 
 ```
-cd /path/to/hdfs-du/service
-mvn clean assembly:assembly -DdescriptorId=bin
-cd target
-unzip hdfsdu-service-0.1.0-bin.zip
-java -Xms2048m -Xmx2048m -cp 'hdfsdu-service-0.1.0/lib/*' \
-  com.twitter.hdfsdu.HdfsDu \
-    -http_port=20000 \
-    -use_glog \
-    -use_glog_formatter \
-    -input_path=hdfsdu.data
+./start.sh /path/to/hdfsdu.data
 ```
 
 Point your web browser to [http://localhost:20000](http://localhost:20000) and see what your
