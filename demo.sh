@@ -1,5 +1,8 @@
 #!/bin/bash -x
 
+# Exit on the failure of any simple command
+set -e
+
 HDFSDU_VERSION=0.1.0
 
 cd service
