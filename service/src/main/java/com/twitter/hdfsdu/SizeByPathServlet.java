@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -58,20 +58,27 @@ public class SizeByPathServlet extends TextResponseHandler {
 		Integer paramLimit = request.getParameter("limit") == null ? 100
 				: Integer.parseInt(request.getParameter("limit"));
 
-		Statement statement = HdfsDu.conn.createStatement();
-		String query;
+		PreparedStatement statement;
+		int parameterIndex = 1;
 		if (paramPath.equals("/")) {
-			query = "select * from size_by_path "
-					+ "where (path like '" + paramPath + "%') and path_depth <= "
-					+ paramDepth + " order by path limit " + paramLimit;
+			statement = HdfsDu.conn.prepareStatement("select * from size_by_path "
+					+ "where (path like ?) and path_depth <= ? "
+					+ "order by path limit ?");
+			statement.setString(parameterIndex++, paramPath + "%");
+			statement.setInt(parameterIndex++, paramDepth);
+			statement.setInt(parameterIndex++, paramLimit);
 		} else {
-			query = "select * from size_by_path "
-					+ "where (path like '" + paramPath + "/%' or path = '" + paramPath + "') and path_depth <= "
-					+ paramDepth + " order by path limit " + paramLimit;
+			statement = HdfsDu.conn.prepareStatement("select * from size_by_path "
+					+ "where (path like ? or path = ?) and path_depth <= ? "
+					+ "order by path limit ?");
+			statement.setString(parameterIndex++, paramPath + "/%");
+			statement.setString(parameterIndex++, paramPath);
+			statement.setInt(parameterIndex++, paramDepth);
+			statement.setInt(parameterIndex++, paramLimit);
 		}
-		LOG.info("Running query: " + query);
+		LOG.info("Running query: " + statement);
 
-		return statement.executeQuery(query);
+		return statement.executeQuery();
 	}
 
 	@Override
