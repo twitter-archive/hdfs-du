@@ -1,3 +1,16 @@
+## Modifications
+- [x] Use Spark to filter out invalid rows in fsimage
+- [x] File path `utf-8` support
+- [x] Customize directory depth to reduce unwanted subdirectories and avoid hitting maximum callstack in `treemap.js` 
+- [ ] Integrate `leaf.py` to pyspark to reduce steps
+- [ ] Web server to load data from HDFS directly to reduce steps
+
+## pyspark script to replace pig script
+```
+spark2-submit ./bin/hdfsvisual.py <fsiamge.csv path in hdfs> <maximum depth>
+
+```   
+---
 # HDFS-DU [![Build Status](https://secure.travis-ci.org/twitter/hdfs-du.png)](http://travis-ci.org/twitter/hdfs-du)
 
 ![hdfsdu UI screenshot](https://github.com/twitter/hdfs-du/raw/master/docs/img/v1.png)
