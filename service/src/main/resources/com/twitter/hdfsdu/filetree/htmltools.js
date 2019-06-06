@@ -39,7 +39,7 @@ HT.htmlA = function(attributes, text, link)
 HT.svg = function(attributes, content)
 {
   attributes = typeof attributes !== 'undefined' ? attributes : {};
-  attributes = HT.mergeProperties({xmlns: "http://www.w3.org/2000/svg"}, attributes);
+  attributes = HT.mergeProperties({xmlns: "https://www.w3.org/2000/svg"}, attributes);
   return HT.html("svg", attributes, content);
 }
 

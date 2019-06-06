@@ -1074,7 +1074,7 @@ var Canvas;
     },
     
     createLabelContainer: function(type, idLabel, dim) {
-      var NS = 'http://www.w3.org/2000/svg';
+      var NS = 'https://www.w3.org/2000/svg';
       if(type == 'HTML' || type == 'Native') {
         return $E('div', {
           'id': idLabel,
@@ -8234,7 +8234,7 @@ Graph.Label.SVG = new Class({
     plotLabel: function(canvas, node, controller) {
       var id = node.id, tag = this.getLabel(id);
       if(!tag && !(tag = document.getElementById(id))) {
-        var ns = 'http://www.w3.org/2000/svg';
+        var ns = 'https://www.w3.org/2000/svg';
           tag = document.createElementNS(ns, 'svg:text');
         var tspan = document.createElementNS(ns, 'svg:tspan');
         tag.appendChild(tspan);
