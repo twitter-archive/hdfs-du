@@ -54,7 +54,7 @@ To visualize your own cluster, you need to generate an HDFS-DU data set. Current
 multi-step process:
 
 * Export the HDFS fsimage file for offline processing with the
-  [Offline Image Viewer](http://hadoop.apache.org/hdfs/docs/current/hdfs_imageviewer.html)
+  [Offline Image Viewer](http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsImageViewer.html)
 * Process the fsimage export with [Pig](http://pig.apache.org).
 * Post-process the pig data set.
 
